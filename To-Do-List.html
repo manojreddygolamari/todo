@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="To-Do-List1.css">
+    <script src="To-Do-List.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+     
+    <title>To-Do List</title>
+</head>
+<body>
+    <header>
+        <!--To-Do Header starts-->
+        <div class="wrapper">
+                <div class="header">
+                    <div class="title">
+                        <h3 class="title-text">
+                            To-Do List
+                        </h3>
+                    </div>
+                    <div class="search" >
+                        <i class="fas fa-search"></i>
+                        <input type="text"  id="search" placeholder="Search" >
+                    </div>   
+            
+                        <button id="quickadd" class="btn">ADD LIST</button>
+                </div>
+        </div>
+        <!--To-Do Header ends-->
+    </header>
+    <!--Modal starts-->
+    <div class="modal-container">
+        <div class="modal">
+            <h3 class="title-text">Add List</h3>
+            <hr>
+            <h3 class="list-title">Title</h3>
+            <input type="text"  id="card-title" class="list-input" placeholder="List Title" name="title" required>
+            <div class="btns">
+                <button id="cancelcard" class="cancel-btn">Cancel</button>
+                <button id="addcard" class="add-btn">Add</button>
+            </div>
+        </div>
+    </div>
+    <!--Modal ends-->
+
+    <!--card list section starts-->
+    <div class="hcontainer">
+        <h3 class="availcards" id="availablecards">No cards available</h3>
+    </div>
+    <div class="wrapper">
+         <div id="listContainer" class="listContainer">
+              <!-- <div class="maincontainer" id="maincontainer">
+                    <div class="subcontainer1" id="subcontainer">
+                            <div id="list" class="list">
+                                    <div class="listtitlediv" id="listtitlediv">
+                                        <h3 class="listtitle" id="listtitle">
+                                        To Do 
+                                        </h3>
+                                        <h4 class="count" id="count">3</h4>
+                                        <i id="trash" class="far fa-trash-alt"></i>
+                                    </div>
+                          
+                                     
+                                     <div class="ulcontainer" id="ulcontainer">
+                                        <ul class="cardulList" id="cardulList">
+                                            <li>
+                                                <div class="listtitlediv" id="listtitlediv">
+                                                    <h3 class="listtitle" id="listtitle">
+                                                    manoj reddy
+                                                    </h3>
+                                                    <i id="fav" class="far fa-star"></i> 
+                                                    <i id="trash" class="far fa-trash-alt"></i>
+                                                </div>
+                                                <div class="description" id="description">
+                                                    <h4 class="descriptionarea" id="descriptionarea">
+                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur deleniti ipsum quidem repudiandae omnis, tempora obcaecati nam, earum quo neque aliquid! Assumenda, architecto iure maiores natus illum dolores velit. Consequuntur.
+                                                    </h4>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="listtitlediv" id="listtitlediv">
+                                                    <h3 class="listtitle" id="listtitle">
+                                                    manoj reddy
+                                                    </h3>
+                                                    <i id="fav" class="far fa-star"></i> 
+                                                    <i id="trash" class="far fa-trash-alt"></i>
+                                                </div>
+                                                <div class="description" id="description">
+                                                    <h4 class="descriptionarea" id="descriptionarea">
+                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur deleniti ipsum quidem repudiandae omnis, tempora obcaecati nam, earum quo neque aliquid! Assumenda, architecto iure maiores natus illum dolores velit. Consequuntur.
+                                                    </h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                  
+                            </div> -->
+                    </div>
+                        <div class="subcontainer2" id="subcontainer">
+                            <button id="Addcardinlist"class="Addcardinlist"> + Add card</button>
+                        </div>
+                </div>
+        </div>
+    </div>
+      <!--card list section ends-->
+      <!--add card to list modal starts-->
+       
+      <div class="wrapper">
+        <div class="cardmodalcontainer" style="visibility:hidden"> 
+            <div class="cardmodal">
+                <h3 class="title-text">Add Card</h3>
+                <hr>
+                <h3 class="list-title">Title</h3>
+                <input type="text"  id="cardtitle1" class="list-input" placeholder="List Title" autofocus>
+                <h3 class="list-description">Description</h3>
+                <input type="text"  id="carddesc" class="list-input" placeholder="Description" style="height:50px" >
+                <div class="btns">
+                    <button id="cancelcardmodal" class="cancel-btn">Cancel</button>
+                    <button id="addcardbtn" class="add-btn">Add</button>
+                </div>
+            </div>
+        </div>
+       </div>
+ <!--add card to list modal ends-->
+
+</body>
+</html>
+

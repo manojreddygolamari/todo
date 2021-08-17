@@ -87,6 +87,8 @@ window.onload=function(){
                     {
                         const cardModalcontainer=document.querySelector(".cardmodalcontainer");
                         const cancelCardmodal=document.getElementById("cancelcardmodal");
+                        const addcardinList=document.getElementById("addcardbtn")
+                        addcardinList.addEventListener("click",cardAdd)
                         cardModalcontainer.style.visibility ="visible";
                         //modal visibility logic
                     
@@ -113,5 +115,48 @@ window.onload=function(){
 
         }
 
+       
 }
+function cardAdd()
+{
+    var cardModalcontainer=document.querySelector(".cardmodalcontainer");
+    var list=document.querySelector(".list");
+    var cardTitle=document.getElementById("cardtitle1").value;
+    var cardDes=document.getElementById("carddesc").value;
 
+    if(cardTitle!='' && cardDes!='')
+    {
+        var uiContainer=document.createElement("div");
+        uiContainer.classList.add("ulcontainer");
+        list.appendChild(uiContainer);
+
+        var uL=document.createElement("ul");
+        uL.classList.add("cardulList");
+        uiContainer.appendChild(uL);
+  
+        var Li=document.createElement("li");
+        var listtitlediv=document.createElement("div");
+        listtitlediv.classList.add("listtitlediv");
+        uL.appendChild(Li);
+        Li.appendChild(listtitlediv);
+
+        var h3 = document.createElement("H3");
+        var t3 = document.createTextNode(cardTitle);
+         h3.appendChild(t3);
+         listtitlediv.appendChild(h3);
+
+         var desdiv=document.createElement("div");
+         desdiv.classList.add("description")
+         uiContainer.appendChild(desdiv);
+
+        var desch3=document.createElement('h3');
+        var dest3=document.createTextNode(cardDes);
+        desch3.appendChild(dest3)
+        uiContainer.appendChild(desch3);
+
+        
+        cardModalcontainer.style.visibility ="hidden";
+    }
+    
+
+}
